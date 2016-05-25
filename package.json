@@ -1,0 +1,26 @@
+{
+  "name": "placardarodada",
+  "version": "1.0.0",
+  "description": "aplicação que notificará a cada gol em tempo real.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prjThiago/PlacarDaRodadaNodeJS.git"
+  },
+  "author": "thiago morais",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prjThiago/PlacarDaRodadaNodeJS/issues"
+  },
+  "homepage": "https://github.com/prjThiago/PlacarDaRodadaNodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "express-load": "^1.1.15",
+    "socket.io": "^1.4.6"
+  }
+}

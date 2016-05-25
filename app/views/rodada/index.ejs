@@ -1,0 +1,53 @@
+<html>
+	<body>
+		<h1>Rodada do Campeonato</h1>
+        
+		<table>
+			<thead>
+				<th>Casa</th>
+				<th colspan="3">Placar</th>
+                <th>Visitante</th>
+			</thead>
+			<tbody>
+                <tr>
+				    <td>Botafogo</td>
+                    <td><span id="Botafogo">0</span></td>
+                    <td>X</td>
+                    <td><span id="Flamengo">0</span></td>
+                    <td>Flamengo</td>		
+                </tr>
+                <tr>
+				    <td>Fluminense</td>
+                    <td><span id="Fluminense">0</span></td>
+                    <td>X</td>
+                    <td><span id="Vasco">0</span></td>
+                    <td>Vasco</td>		
+                </tr>
+                <tr>
+				    <td>São Paulo</td>
+                    <td><span id="Saopaulo">0</span></td>
+                    <td>X</td>
+                    <td><span id="Santos">0</span></td>
+                    <td>Santos</td>		
+                </tr>
+                <tr>
+				    <td>Palmeiras</td>
+                    <td><span id="Palmeiras">0</span></td>
+                    <td>X</td>
+                    <td><span id="Corinthians">0</span></td>
+                    <td>Corinthians</td>
+                </tr>
+			<tbody>
+		</table>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+            
+            socket.on('gol', function(data){
+                
+                var gol = parseInt(document.getElementById(data.time).textContent);                
+                document.getElementById(data.time).textContent = gol + 1;
+            });            
+        </script>
+	</body>
+</html>
